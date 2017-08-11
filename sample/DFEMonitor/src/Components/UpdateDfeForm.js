@@ -14,7 +14,8 @@ export class UpdateDfeForm extends Component{
 							ip_address:this.refs.ip_address.value,
 							user:this.refs.user.value,
 							date:this.refs.date.value ,
-							inUse:true});
+							testboard:(this.refs.testboard.checked)? true : false,
+							dfeID:this.props.dfelist.id});
 	}	
 	render(){
 		return (
@@ -27,8 +28,10 @@ export class UpdateDfeForm extends Component{
 					<input id='user' type='text' ref='user' required />				
 					<label>Date</label>
 					<input id='user' type='date' ref='date' required />
-					
-					<button type='submit' value = 'submit'>Submit</button>
+					<label>Test Board
+					<input id='testboard' type='checkbox' ref='testboard' />
+					</label>
+					<button type='submit' value = 'submit'>Update</button>
 				</form>
 			</div>
 		)

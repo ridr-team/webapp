@@ -9,7 +9,7 @@ export const DFEList = ({dfelist, onDelete}) => (
 				<th>ip_address</th>
 				<th>User</th>
 				<th>Date</th>
-				<th>Status</th>
+				<th>TestBoard</th>
 			</tr>
 		</thead>
 		<tbody>

@@ -8,13 +8,13 @@ export class AddDfeForm extends Component{
 
 	}
 	submit(e)
-	{
+	{	
 		e.preventDefault();
 		this.props.onNewIP({
 							ip_address:this.refs.ip_address.value,
 							user:this.refs.user.value,
 							date:this.refs.date.value ,
-							inUse:true});
+							testboard:(this.refs.testboard.checked)? true : false});
 	}	
 	render(){
 		return (
@@ -26,8 +26,10 @@ export class AddDfeForm extends Component{
 					<label> User</label>
 					<input id='user' type='text' ref='user' required />				
 					<label>Date</label>
-					<input id='user' type='date' ref='date' required />
-					
+					<input id='date' type='date' ref='date' required />
+					<label>Test Board
+					<input id='testboard' type='checkbox' ref='testboard' />
+					</label>
 					<button type='submit' value = 'submit'>Submit</button>
 				</form>
 			</div>
